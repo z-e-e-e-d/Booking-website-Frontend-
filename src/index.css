@@ -1,5 +1,7 @@
 @import "tailwindcss";
 .bg-custom-purple {
-    background-color: #DFD7F9;
-  }
-  
+  background-color: #dfd7f9;
+}
+.bg-custom-baige {
+  background-color: #FFF1DA;
+}

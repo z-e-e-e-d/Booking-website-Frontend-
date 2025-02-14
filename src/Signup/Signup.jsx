@@ -1,21 +1,17 @@
 import React from "react";
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
-
-const Login = () => {
-  const navigate = useNavigate();
-  const handleSignupClick = () => {
-    navigate("/signup");
-  };
+const Signup = () => {
   return (
-    <div className="flex flex-col gap-4 lg:gap-8 mx-auto bg-white w-[80%] h- lg:w-140 p-15 rounded-4xl mt-40 lg:mt-20 shadow-2xs border-1  ">
+    <div className="flex flex-col gap-4 lg:gap-8 mx-auto bg-white w-[80%] h- lg:w-140 p-15 rounded-4xl mt-40 lg:mt-10 shadow-2xs border-1 ">
+      <label htmlFor="">Username</label>
+      <input type="text" className="border-1 rounded-2xl lg:p-4 p-2  " />
       <label htmlFor="">Email</label>
       <input type="email" className="border-1 rounded-2xl lg:p-4 p-2  " />
       <label htmlFor="">Password</label>
       <input type="password" className="border-1 rounded-2xl lg:p-4 p-2" />
-      <h3>Forget Password?</h3>
       <button className="bg-black text-white font-bold rounded-2xl p-3 w-30 self-center hover:bg-gray-700">
-        Login
+        Sign Up
       </button>
       <h3 className="text-center">or continue with</h3>
       <div className="flex items-center justify-between  ">
@@ -30,13 +26,13 @@ const Login = () => {
         </a>
       </div>
       <div className=" flex items-center justify-center gap-1">
-        <h3>Don't have an account yet?</h3>
-        <Link to="/signup" className="underline">
-          Register for free
+        <h3></h3>
+        <Link to="/login" className="underline">
+          I have an account
         </Link>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Signup;

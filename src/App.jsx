@@ -11,11 +11,12 @@ import Login from "./Login/Login";
 import Marks from "./Marks";
 import Email from "./Email";
 import Footer from "./Footer";
+import Signup from "./Signup/Signup";
 function App() {
   return (
     <BrowserRouter>
       <div
-        className="bg-[url('./assets/images/Decore.png')] bg-right bg-no-repeat min-h-screen
+        className="pt-20 bg-[url('./assets/images/Decore.png')] bg-right bg-no-repeat min-h-screen
       bg-cover sm:bg-cover md:bg-[50%] lg:bg-[40%] "
       >
         <Navbar />
@@ -39,6 +40,7 @@ function App() {
           <Route path="/flights" element={<h1></h1>} />
           <Route path="/bookings" element={<h1></h1>} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
         </Routes>
       </div>
     </BrowserRouter>

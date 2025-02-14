@@ -7,10 +7,13 @@ const Navbar = () => {
   const handleLoginClick = () => {
     navigate("/login");
   };
+  const handleSignupClick = () => {
+    navigate("/signup");
+  };
 
   return (
     
-    <div className=" shadow-2xl flex flex-wrap justify-between items-center p-4 px-4 sm:px-8 md:px-16 lg:px-24">
+    <div className="fixed top-0 w-full bg-custom-baige shadow-2xl flex flex-wrap justify-between items-center p-4 px-4 sm:px-8 md:px-16 lg:px-24 z-50">
       <div className="w-1/3 md:w-auto">
         <img src={logo} alt="Logo" className="h-10" />
       </div>
@@ -35,7 +38,9 @@ const Navbar = () => {
         >
           Login
         </button>
-        <button className="px-4 py-2 rounded border-1 border-transparent hover:border hover:border-black">
+        <button
+         onClick={handleSignupClick}
+         className="px-4 py-2 rounded border-1 border-transparent hover:border hover:border-black">
           Sign up
         </button>
         <select className="p-2 appearance-none bg-transparent focus:outline-none">
