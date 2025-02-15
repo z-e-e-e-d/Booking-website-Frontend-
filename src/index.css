@@ -5,3 +5,8 @@
 .bg-custom-baige {
   background-color: #FFF1DA;
 }
+html,
+body {
+  overflow-x: hidden !important;
+  width: 100%;
+}

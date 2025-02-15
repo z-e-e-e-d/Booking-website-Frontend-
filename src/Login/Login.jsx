@@ -1,12 +1,9 @@
 import React from "react";
 import { FaGithub, FaGoogle, FaFacebook } from "react-icons/fa";
 import { useNavigate, Link } from "react-router-dom";
+import {motion} from "framer-motion"
 
 const Login = () => {
-  const navigate = useNavigate();
-  const handleSignupClick = () => {
-    navigate("/signup");
-  };
   return (
     <div className="flex flex-col gap-4 lg:gap-8 mx-auto bg-white w-[80%] h- lg:w-140 p-15 rounded-4xl mt-40 lg:mt-20 shadow-2xs border-1  ">
       <label htmlFor="">Email</label>

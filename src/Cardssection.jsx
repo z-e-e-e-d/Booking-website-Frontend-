@@ -3,13 +3,17 @@ import Card from "./Card";
 import cardImg from "./assets/images/cardImg1.png";
 import cardImg2 from "./assets/images/cardImg2.png";
 import cardImg3 from "./assets/images/cardImg3.png";
-
+import { motion } from 'framer-motion';
 const Cardssection = () => {
   return (
     <div className="flex flex-col gap-10  ">
       <div className="flex flex-col mx-auto text-center gap-2 ">
-        <h3 className="text-gray-500 text-3xl lg:text-3xl">Top Selling</h3>
-        <h1 className="text-blue-950 text-5xl lg:text-6xl">Top Destinations</h1>
+        <motion.h3  whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: 300, opacity: 0 }}
+        transition={{ duration: 0.9 }} className="text-gray-500 text-3xl lg:text-3xl">Top Selling</motion.h3>
+        <motion.h1 whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: 300, opacity: 0 }}
+        transition={{ duration: 0.9 }} className="text-blue-950 text-5xl lg:text-6xl">Top Destinations</motion.h1>
       </div>
       <div className="flex flex-col gap-10 lg:gap-30 lg:flex-row items-center justify-center">
         <Card

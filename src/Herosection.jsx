@@ -1,10 +1,16 @@
 import React from "react";
 import girl from "./assets/images/girl.png";
 import playButton from "./assets/images/Playbutton.png";
+import { motion } from "framer-motion";
 const Herosection = () => {
   return (
-    <div className="flex justify-around flex-col lg:flex-row">
-      <div className="flex flex-col justify-center items-center mx-auto lg:mx-0 p-4 gap-5 w-[90%] lg:w-1/3 lg:gap-8 lg:p-24">
+    <motion.div
+      whileInView={{ x: 0, opacity: 1 }}
+      initial={{ x: 300, opacity: 0 }}
+      transition={{ duration: 0.9 }}
+      className="flex justify-around flex-col lg:flex-row"
+    >
+      <div className="flex flex-col justify-center items-center mx-auto mt-40 lg:mt-0 lg:mx-0 p-4 gap-5 w-[90%] lg:w-1/3 lg:gap-8 lg:p-24">
         <h3 className=" text-orange-600 text-2xl lg:text-3xl ">
           Best Destinations around the world
         </h3>
@@ -20,16 +26,22 @@ const Herosection = () => {
           <button className=" bg-orange-400 p-2.5 rounded-xl text-white h-12 hover:bg-orange-700">
             Find out more
           </button>
-          <button className="flex justify-between items-center h-12">
+          <button className="flex justify-between items-center h-12 border-orange-400 hover:border-2 pt-0.5 rounded-2xl pr-6 box-border">
             <img src={playButton} alt="" className="w-18" />
             <h>Play Demo</h>
           </button>
         </div>
       </div>
       <div>
-        <img src={girl} alt="" />
+        <motion.img
+          src={girl}
+          alt=""
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: 300, opacity: 0 }}
+          transition={{ duration: 0.9 }}
+        />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
